@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
+        primaryColor: Colors.blue,
         textTheme: const TextTheme(
           displayLarge: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
           displaySmall: TextStyle(
@@ -41,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Center(child: Text('Hello')),
+        backgroundColor: Theme.of(context).primaryColor,
       ),
       body: Column(
         children: [
@@ -49,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
             style: Theme.of(context)
                 .textTheme
                 .displayLarge!
-                .copyWith(color: Colors.orange),
+                .copyWith(color: Theme.of(context).primaryColor),
           ),
           Text(
             "Text 2",
